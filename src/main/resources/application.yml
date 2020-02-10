@@ -1,0 +1,19 @@
+#端口号配置
+server:
+  port: 8088
+spring:
+  #静态文件配置
+  resources:
+    static-locations: classpath:/static,classpath:/META-INF/resources,classpath:/templates/
+  #jdbc配置
+  datasource:
+    url: jdbc:mysql://192.168.0.104:3306/lsr-microservice?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: lishirui
+    driver-class-name: com.mysql.jdbc.Driver
+#mybatis配置
+mybatis:
+  #映射文件路径
+  mapper-locations: classpath:mapper/*.xml
+  #模型所在的保命
+  type-aliases-package: cn.lsr.entity
